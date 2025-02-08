@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    <input id="a" type="text" placeholder="Username"><br>
+    <input id="b" type="text" placeholder="Password"><br>
+    <div>
+        <button id="sbmt" onmouseenter="fnc()">Submit</button>
+    </div>
+<style>
+        input{
+            padding: 10px;
+            margin: 10px;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+        }
+        #sbmt{
+            transition: 0.2s;
+        }
+        #sbmt{
+            background-color: red;
+        }
+    </style>
+    <script>
+        function fnc(){
+            if(document.getElementById("a").value=="a" && document.getElementById("b").value=="a"){
+                document.getElementById("sbmt").style.cssText="background-color:green;"
+                document.getElementById("sbmt").innerHTML="Done!"
+            }
+            else if(document.getElementById("sbmt").innerHTML=="Submit"){
+                document.getElementById("sbmt").style.cssText="margin-left:100px;"
+                document.getElementById("sbmt").innerHTML="Check Input Again!"
+            }
+            else if(document.getElementById("sbmt").innerHTML="Check Again!"){
+                document.getElementById("sbmt").style.cssText="margin-left:10px;"
+                document.getElementById("sbmt").innerHTML="Submit"
+            }
+        }
+        function fnc2(){
+        }
+    </script>
+</body>
+</html>
